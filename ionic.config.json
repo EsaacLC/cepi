@@ -1,0 +1,8 @@
+{
+  "name": "cepi",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "f9b835a3"
+}
