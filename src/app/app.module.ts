@@ -10,10 +10,12 @@ import { InserirAlunoPage } from '../pages/inserir-aluno/inserir-aluno';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { AngularFireModule } from 'angularfire2';
+import {AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AddVisitorPage } from '../pages/add-visitor/add-visitor';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
+    AddVisitorPage,
     InserirAlunoPage,
     TabsPage
   ],
@@ -35,7 +38,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
       projectId: "cepi-cadastro",
       storageBucket: "cepi-cadastro.appspot.com",
       messagingSenderId: "544453815871"
-    })
+    }),
+    //Initilize Firebase params
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -43,6 +48,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
+    AddVisitorPage,
     InserirAlunoPage,
     TabsPage
   ],

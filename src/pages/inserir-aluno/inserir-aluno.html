@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="cepi">
     <ion-title>Cadastrar Aluno</ion-title>
   </ion-navbar>
 
@@ -16,23 +16,23 @@
 <ion-content padding>
     <ion-item>
         <ion-label stacked>Nome</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="aluno.nome"></ion-input>
       </ion-item>
     
       <ion-item>
         <ion-label stacked>Série</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="aluno.serie"></ion-input>
       </ion-item>
     
       <ion-item>
         <ion-label stacked>Turma</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="aluno.turma"></ion-input>
       </ion-item>
       
       <ion-item>
         <ion-label stacked>Nome da Prova</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="aluno.nomeProva"></ion-input>
       </ion-item>
         
-      <button ion-button full>Enviar</button>
+      <button ion-button full (click)="addStudant(aluno)">Enviar</button>
 </ion-content>

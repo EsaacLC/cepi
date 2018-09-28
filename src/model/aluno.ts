@@ -1,6 +1,6 @@
 export interface Aluno {
-  nome: string,
-  serie: string,
+  nome: string;
+  serie: string;
   turma: string;
-  nomeProva: string
+  nomeProva: string;
 }

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Aluno } from '../../model/aluno';
+import { AngularFireDatabase } from 'angularfire2/database'
 
 /**
  * Generated class for the InserirAlunoPage page.
@@ -15,11 +17,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class InserirAlunoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  aluno = {} as Aluno;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams, 
+    private afDb: AngularFireDatabase) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad InserirAlunoPage');
+  addStudant(aluno: Aluno){
+    this.afDb.list('aluno')
+    .push(aluno).then(r =>console.log(r));
   }
-
 }
